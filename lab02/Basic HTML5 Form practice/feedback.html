@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>
+        Feedback Form
+    </h1>
+    <form method="post" action="/submit">
+        <fieldset>
+            <legend>Feedback Information</legend><br><br>
+
+            <label>Full Name :</label>
+            <input type="text" required id="name"><br><br>
+
+            <label>Email :</label>
+            <input type="email" required id="email"><br><br>
+
+            <label>Feedback :</label>
+            <input type="textarea" required id="feedback"><br><br>
+
+            <label>Rate us😄</label><br><br>
+            <input type="radio" value="Very satisfied" name="rate">1<br>
+            <input type="radio" value="Satisfied" name="rate">2<br>
+            <input type="radio" value="Neutral" name="rate">3<br>
+            <input type="radio" value="Dissatisfied" name="rate">4<br>
+            <input type="radio" value="Very Dissatisfied" name="rate">5<br><br>
+
+
+            <button class="btn" id="btn">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

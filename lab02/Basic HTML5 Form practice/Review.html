@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Product Review Form</title>
+</head>
+<body>
+    <h1>
+        E-Commerce Product Review Form
+    </h1>
+    <form method="post" action="/submit">
+        <fieldset>
+            <legend>Product information</legend>
+
+            <label>Product Name :</label>
+            <input type="text" required id="name"><br><br>
+
+            <label>Reviewer Name :</label>
+            <input type="email" required id="reviewername"><br><br>
+
+            <label>Rate us😄</label><br><br>
+            <input type="radio" value="Very satisfied" name="rate">1<br>
+            <input type="radio" value="Satisfied" name="rate">2<br>
+            <input type="radio" value="Neutral" name="rate">3<br>
+            <input type="radio" value="Dissatisfied" name="rate">4<br>
+            <input type="radio" value="Very Dissatisfied" name="rate">5<br><br>
+
+            <label>Write your Review :</label>
+            <input type="textarea" required id="review"><br><br>
+
+            <label>Would you recommend this product?</label>
+            <select>
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+
+            <button class="btn" id="btn">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+    <h1>
+        Job Application Form
+    </h1>
+    <form method="post" action="/submit">
+        <fieldset>
+            <legend>Personal Information</legend><br><br>
+
+            <label>Name :</label>
+            <input type="text" required id="name"><br><br>
+
+            <label>Email :</label>
+            <input type="email" required id="email"><br><br>
+
+            <label>Position Applied for : </label>
+            <select>
+                <option value="">Select</option>
+                <option value="Graphic Designing">Graphic Designing</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Marketing Manager">Marketing Manager</option>
+            </select><br><br>
+
+            <label>Upload your resume</label>
+            <input type="file" id="terms"><br><br>
+
+            <label>Your Skills :</label>
+            <input type="textarea" required id="Skills"><br><br>
+
+            <input type="checkbox" id="terms">I certify that all information provided is true.<br><br>
+
+
+            <button class="btn" id="btn">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+

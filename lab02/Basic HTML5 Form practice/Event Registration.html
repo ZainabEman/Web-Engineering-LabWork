@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+</head>
+<body>
+    <h1>
+        Event Registration Form
+    </h1>
+    <form method="post" action="/submit">
+        <fieldset>
+            <legend>Event Registration Information</legend><br><br>
+
+            <label>Name :</label>
+            <input type="text" required id="name"><br><br>
+
+            <label>Email :</label>
+            <input type="email" required id="email"><br><br>
+
+            <label>Contact Number :</label>
+            <input type="tel" required id="Phone"><br><br>
+
+            <label>Event Type : </label>
+            <select>
+                <option value="">Select</option>
+                <option value="Conference">Conference</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Webinar">Webinar</option>
+            </select><br><br>
+
+            <label id="diet preference">Dietery Prefrence : </label>
+            <select>
+                <option value="">Select</option>
+                <option value="Vegetarian">Vegetarian,</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+            </select><br><br>
+
+            <input type="checkbox" id="terms">I agree to the terms and conditions.<br><br>
+
+
+            <button class="btn" id="btn">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+

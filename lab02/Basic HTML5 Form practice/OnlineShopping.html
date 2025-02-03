@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Form</title>
+</head>
+<body>
+    <h1>
+        Online Shopping Form
+    </h1>
+    <form method="post" action="/submit">
+        <fieldset>
+            <legend>Online shooping Information</legend><br><br>
+
+            <label>Customer Name :</label>
+            <input type="text" required id="name"><br><br>
+
+            <label>Email :</label>
+            <input type="email" required id="email"><br><br>
+
+            <label>Delivery Address :</label>
+            <input type="text" required id="Address"><br><br>
+
+            <label>Choose Item : </label>
+            <select>
+                <option value="">Select</option>
+                <option value="NoteBook">NoteBook</option>
+                <option value="Pen">Pen</option>
+                <option value="Calculator">Calculator</option>
+                <option value="Bag">Bag</option>
+                <option value="pencil">pencil</option>
+            </select><br><br>
+
+
+            <button class="btn" id="btn">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Bill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bill-calc">
+            <h1>Calculate Your Bill</h1>
+            <label for="totalBill">Total Bill</label>
+            <input type="number" id="totalBill" value="0" ><br>
+
+            <label for="tips">Tips %</label>
+            <input type="number" id="tips" value="0">
+
+            <label for="people">People</label>
+            <div class="people-controls">
+                <button class="change-people" data-change="-1" onclick="changePeople(-1)">-</button>
+                <input type="number" id="people" value="0" >
+                <button class="change-people" data-change="1" onclick="changePeople(1)">+</button>
+            </div>
+
+            <button onclick="calculate()">Calculate</button>
+        </div>
+
+        <div class="summary">
+            <h1>Summary</h1>
+            <p>Total Bill: $<span id="displayTotalBill">1000</span></p>
+            <p>Tips Amount: $<span id="displayTips">20</span></p>
+            <p>Tax 5%: $<span id="displayTax">50.00</span></p>
+            <p>Total Per Person: $<span id="totalPerPerson">515.02</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Club Membership Form</title>
+</head>
+<body>
+    <h1>
+        Fitness Club Membership Form
+    </h1>
+    <form method="post" action="/submit">
+        <fieldset>
+            <legend>Membership information</legend>
+
+            <label>Name :</label>
+            <input type="text" required id="name"><br><br>
+
+            <label>Date of Birth :</label>
+            <input type="date" required id="DOB"><br><br>
+
+            <label>Membership Type</label><br><br>
+            <input type="radio" value="Monthly" name="rate">Monthly<br>
+            <input type="radio" value="Quarterly" name="rate">Quarterly<br>
+            <input type="radio" value="Annual" name="rate">Annual<br><br>
+
+            <label>Prefred Activities</label><br><br>
+            <input type="checkbox" id="terms">Gym<br>
+            <input type="checkbox" id="terms">Yoga<br>
+            <input type="checkbox" id="terms">Swimming<br><br>
+
+            <label>Emergency Contact Number :</label>
+            <input type="tel" required id="Phone"><br><br>
+
+
+            <button class="btn" id="btn">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

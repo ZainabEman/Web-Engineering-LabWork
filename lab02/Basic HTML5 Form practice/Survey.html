@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1>
+        Survey Form
+    </h1>
+    <form method="post" action="/submit">
+        <fieldset>
+            <legend>Survey Information</legend><br><br>
+
+            <label>How satisfied are you with our services?</label><br><br>
+            <input type="radio" value="Very satisfied" name="q1">Very satisfied<br>
+            <input type="radio" value="Satisfied" name="q1">Satisfied<br>
+            <input type="radio" value="Neutral" name="q1">Neutral<br>
+            <input type="radio" value="Dissatisfied" name="q1">Dissatisfied<br>
+            <input type="radio" value="Very Dissatisfied" name="q1">Very Dissatisfied<br><br>
+
+
+            <label>What are your preferred contact methods?</label><br><br>
+            <input type="checkbox" value="Very satisfied" name="q2">Very satisfied<br>
+            <input type="checkbox" value="Satisfied" name="q2">Satisfied<br>
+            <input type="checkbox" value="Neutral" name="q2">Neutral<br>
+            <input type="checkbox" value="Dissatisfied" name="q2">Dissatisfied<br>
+            <input type="checkbox" value="Very Dissatisfied" name="q2">Very Dissatisfied<br><br>
+
+            <label>Would you recommend us to others?</label>
+            <select>
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+
+
+
+
+            <button class="btn" id="btn">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

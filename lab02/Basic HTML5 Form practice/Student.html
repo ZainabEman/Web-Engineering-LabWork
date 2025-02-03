@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+<body>
+    <h1>
+        Student Registration Form
+    </h1>
+    <form method="post" action="/submit">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Full Name :</label>
+            <input type="text" required id="name"><br><br>
+
+            <label>Date of Birth :</label>
+            <input type="date" required id="DOB"><br><br>
+
+            <label>Gender :</label>
+            <select>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+
+
+            <label>Email :</label>
+            <input type="email" required id="email"><br><br>
+
+            <label>Password :</label>
+            <input type="password" required id="Password"><br><br>
+
+            <label>Confirm Password :</label>
+            <input type="password" required id="C_passwprd"><br><br>
+            <button class="btn" id="btn">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
