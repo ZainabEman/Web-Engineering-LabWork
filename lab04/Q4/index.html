@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questio04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Project Management Dashboard</h1>
+
+    <input type="text" id="searchBox" placeholder="Search by title..." onkeyup="searchProjects()">
+    <select id="filterStatus" onchange="filterProjects()">
+        <option value="all">All</option>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+    </select>
+
+    <div id="projectForm">
+        <input type="text" id="projectTitle" placeholder="Project Title">
+        <textarea id="projectDescription" placeholder="Project Description"></textarea>
+        <select id="projectStatus">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <button onclick="addOrUpdateProject()">Add Project</button>
+    </div>
+
+    <ul id="projectList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
