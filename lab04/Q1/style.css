@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#changeColorButton {
+    padding: 20px 40px;
+    font-size: 20px;
+    cursor:pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+#changeColorButton:hover {
+    background-color: grey;
+}
