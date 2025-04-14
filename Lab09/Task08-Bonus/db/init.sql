@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS event_db;
+USE event_db;
+
+CREATE TABLE IF NOT EXISTS events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    event_name VARCHAR(255) NOT NULL,
+    organizer_name VARCHAR(255) NOT NULL,
+    event_date DATE NOT NULL,
+    latitude DECIMAL(10, 6) NOT NULL,
+    longitude DECIMAL(10, 6) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
