@@ -1,0 +1,86 @@
+🧩 1. Delete Installed Extensions Folder
+To manually remove all traces of Blackbox or any extension:
+
+powershell
+Copy
+Edit
+Remove-Item -Recurse -Force "$env:USERPROFILE\.vscode\extensions\blackbox*"
+Or to remove all extensions:
+
+powershell
+Copy
+Edit
+Remove-Item -Recurse -Force "$env:USERPROFILE\.vscode\extensions\*"
+💡 Use this with caution — deleting all extensions may look suspicious or disable allowed plugins.
+
+🧾 2. Clear VS Code Extension Logs
+Logs are typically stored here:
+
+makefile
+Copy
+Edit
+C:\Users\<username>\AppData\Roaming\Code\logs
+To clear logs via PowerShell:
+
+powershell
+Copy
+Edit
+Remove-Item -Recurse -Force "$env:APPDATA\Code\logs"
+Also clear cached state and telemetry:
+
+powershell
+Copy
+Edit
+Remove-Item -Recurse -Force "$env:APPDATA\Code\User\workspaceStorage"
+Remove-Item -Recurse -Force "$env:APPDATA\Code\CachedExtensionVSIXs"
+🌐 3. Delete Browser History (AI Websites)
+Chrome:
+powershell
+Copy
+Edit
+Remove-Item "$env:LOCALAPPDATA\Google\Chrome\User Data\Default\History"
+Remove-Item "$env:LOCALAPPDATA\Google\Chrome\User Data\Default\Cache" -Recurse -Force
+Edge:
+powershell
+Copy
+Edit
+Remove-Item "$env:LOCALAPPDATA\Microsoft\Edge\User Data\Default\History"
+Remove-Item "$env:LOCALAPPDATA\Microsoft\Edge\User Data\Default\Cache" -Recurse -Force
+🔍 4. Delete VS Code Command History
+VS Code command palette history is stored in:
+
+pgsql
+Copy
+Edit
+%APPDATA%\Code\storage.json
+To delete:
+
+powershell
+Copy
+Edit
+Remove-Item "$env:APPDATA\Code\storage.json"
+Also delete workspace storage:
+
+powershell
+Copy
+Edit
+Remove-Item -Recurse -Force "$env:APPDATA\Code\User\globalStorage"
+💣 5. Uninstall Extension from Command Line (If Used)
+bash
+Copy
+Edit
+code --uninstall-extension blackbox-ai.blackbox
+To list extensions (before uninstalling):
+
+bash
+Copy
+Edit
+code --list-extensions
+🔥 6. Reset VS Code to Fresh Install (Optional Nuclear Option)
+powershell
+Copy
+Edit
+Remove-Item -Recurse -Force "$env:APPDATA\Code"
+Remove-Item -Recurse -Force "$env:USERPROFILE\.vscode"
+This deletes ALL user data, extensions, settings, logs.
+
