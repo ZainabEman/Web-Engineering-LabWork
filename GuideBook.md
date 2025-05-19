@@ -1,3 +1,0 @@
-### Useful Extensions
-- Live Server
--
