@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Quiz Question</h1>
+    <p>What is the capital of Pakistan?</p>
+    <form>
+        <input type="radio" name="answer" value="Ramzan Mubarak"> Ramzan Mubarak<br>
+        <input type="radio" name="answer" value="Islamabad"> Islamabad<br>
+        <input type="radio" name="answer" value="Biryani"> Biryani<br>
+        <input type="radio" name="answer" value="Apple"> Apple<br>
+    </form>
+    <button onclick="submitAnswer()">Submit</button>
+
+    <script>
+        function submitAnswer() {
+            let selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                sessionStorage.setItem('quizAnswer', selectedAnswer.value);
+                window.location.href = 'result.html';
+            } else {
+                alert('Please select an answer.');
+            }
+        }
+    </script>
+</body>
+</html>

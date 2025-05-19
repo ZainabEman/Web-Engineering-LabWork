@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            padding: 0 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #66afe9;
+            box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm">
+        <fieldset>
+            <legend>Form Step 01 </legend><br><br>
+            <label>Name :</label>
+            <input type="text" required id="name"><br><br>
+
+            <label>Email :</label>
+            <input type="email" required id="email"><br><br>
+
+            <button type="submit">Next</button>
+        </fieldset>
+    </form>
+    <script>
+        const form = document.getElementById('myForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const formData = {
+            name: nameInput.value,
+            email: emailInput.value
+        };
+        localStorage.setItem('formData', JSON.stringify(formData));
+        alert("Form data saved!");
+        window.location.href = 'step02.html';
+    });
+    </script>
+</body>
+</html>
